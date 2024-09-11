@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+void verificaTrianguloRetangulo(double a, double b, double c) {
+
+    if (a > b) { double temp = a; a = b; b = temp; }
+    if (b > c) { double temp = b; b = c; c = temp; }
+    if (a > b) { double temp = a; a = b; b = temp; }
+
+   
+    if (c * c == a * a + b * b) {
+        printf("O triângulo é retângulo.\n");
+    }
+}
+
+int main() {
+    double a, b, c;
+
+    
+    printf("Digite os três lados do triângulo: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    
+    verificaTrianguloRetangulo(a, b, c);
+
+    return 0;
+}
